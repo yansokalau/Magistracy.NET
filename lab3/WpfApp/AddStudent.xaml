@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Add Student Data" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="lblFirstName" Content="First Name:" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="147,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lblLastName" Content="Last Name:" HorizontalAlignment="Left" Margin="32,46,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="147,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lblTestName" Content="Test Name:" HorizontalAlignment="Left" Margin="32,85,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTestName" HorizontalAlignment="Left" Height="23" Margin="147,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lblTestMark" Content="Test Mark:" HorizontalAlignment="Left" Margin="32,163,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="sliderMark" Maximum="10" Minimum="1" Margin="147,165,53,73" Value="5" SmallChange="1" TickPlacement="BottomRight" AutoToolTipPrecision="1" IsSnapToTickEnabled="True"/>
+        <Label Content="{Binding ElementName=sliderMark, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="34" Margin="239,159,0,0" VerticalAlignment="Top" Width="28" FontSize="16" FontWeight="Bold"/>
+
+        <Label x:Name="lblDate" Content="Test Date:" HorizontalAlignment="Left" Margin="32,123,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="testDatePicker" HorizontalAlignment="Left" Margin="147,125,0,0" VerticalAlignment="Top" Width="120" SelectedDateFormat="Short"/>
+
+        <Button x:Name="btnSave" Content="Add" HorizontalAlignment="Left" Margin="192,230,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="32,230,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>
